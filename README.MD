@@ -1,6 +1,6 @@
 # 📱 Auto Connect Android Phone - Wireless Debugging 
 
-Este projeto fornece uma solução automatizada para o problema comum de reconexão do Android Studio via Wi-Fi. Como a IDE não rastreia mudanças dinâmicas de IP e Porta após reinicializações, este script utiliza o `nmap` para localizar o dispositivo e forçar a conexão via ADB.
+Este script fornece uma solução automatizada para o problema comum de reconexão do Android Studio via Wi-Fi. Como a IDE não rastreia mudanças dinâmicas de IP e Porta após reinicializações, este script utiliza o `nmap` para localizar o dispositivo e forçar a conexão via ADB. Basta executar o arquivo e ele irá buscar seu celular e fazer a conexão com a IDE.
 
 ## 📝 Resumo do Problema
 Após parear o aparelho (QR Code/Pairing Code), é comum que o Android Studio perca a conexão porque:
@@ -13,8 +13,7 @@ Após parear o aparelho (QR Code/Pairing Code), é comum que o Android Studio pe
 ## 🛠️ Requisitos e Instalação
 
 ### 1. Nmap para Windows
-Voce deve ajustar o numero de IP do script para que seja o mesmo  do seu celular
-O script depende do `nmap` para encontrar a porta aberta no seu celular.
+O script depende do `nmap` para encontrar a porta aberta no seu celular. Basta instalar utilizando a opção padrão.
 * **Download:** [nmap.org](https://nmap.org/download.html)
 * **Instalação Importante:** Durante a instalação do componente **Npcap**, você **DEVE** marcar a opção conforme a imagem abaixo para garantir que o script funcione corretamente:
 
@@ -51,5 +50,8 @@ O arquivo `.bat` realiza um scan no range de portas **30001-65535**.
 > [!IMPORTANT]
 > Antes de executar, abra o arquivo `.bat` e altere a variável `ANDROID_DEVICE` para o IP estático que você configurou no seu celular.
 
+* Seu celular e computador devem estar conectados na mesma rede. Se estiverem em redes diferentes não será possível encontrar seu aparelho.
+
 * **Vantagem:** Localiza automaticamente a porta dinâmica do Android sem intervenção manual.
-* **Desvantagem:** Pode levar alguns segundos se a porta tiver mudado.
+
+* **Desvantagem:** Pode levar alguns segundos se a porta tiver mudado (devido ao range considerado para fazer a busca).
