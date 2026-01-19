@@ -19,6 +19,10 @@ echo.
 echo ===================================================================
 echo.
 
+:: CONFIGURAÇÃO DE CAMINHOS LOCAIS (Substitua pelos seus caminhos reais)
+set "PATH=%PATH%;C:\Android\Sdk\platform-tools"
+set "PATH=%PATH%;C:\Program Files (x86)\Nmap"
+
 :: CONFIGURAÇÃO DO DISPOSITIVO
 :: Ajuste aqui o IP utilizado por seu telefone
 set "ANDROID_DEVICE=192.168.X.XXX"
@@ -71,4 +75,5 @@ echo.
 echo %GREEN%========================================
 echo READY for Android Studio!
 echo ========================================%RESET%
+
 timeout /t 10
