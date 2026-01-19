@@ -52,10 +52,11 @@ O arquivo `.bat` realiza um scan no range de portas **30001-65535**.
 
 * Seu celular e computador devem estar conectados na mesma rede. Se estiverem em redes diferentes não será possível encontrar seu aparelho.
 
-* Você deve configurar a variável de ambiente [Paths] dentro do windows e indicar onde está sua pasta de Sdk\platform-tools. No arquivo Bat também é
-possível configurar esse caminho do o android sdk ou o Nmap (caso tenha feito a instalação em um disco diferente)
+* Você deve configurar a variável de ambiente [Paths] dentro do windows e indicar onde está sua pasta Sdk\platform-tools. No arquivo Bat também é
+possível configurar esse caminho do android sdk ou Nmap (caso tenha feito a instalação em um disco diferente)
 
 * **Vantagem:** Localiza automaticamente a porta dinâmica do Android sem intervenção manual.
 
 * **Desvantagem:** Pode levar alguns segundos se a porta tiver mudado (devido ao range considerado para fazer a busca).
+
 
